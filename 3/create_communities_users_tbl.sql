@@ -1,0 +1,112 @@
+-- Делаем db "vk" текущей
+USE vk;
+-- Таблица связи пользователей и групп
+DROP TABLE IF EXISTS `communities_users`;
+
+CREATE TABLE `communities_users` (
+  `community_id` int(10) unsigned NOT NULL COMMENT 'Ссылка на группу',
+  `user_id` int(10) unsigned NOT NULL COMMENT 'Ссылка на пользователя',
+  `created_at` datetime DEFAULT current_timestamp() COMMENT 'Время создания строки',
+  PRIMARY KEY (`community_id`,`user_id`) COMMENT 'Составной первичный ключ'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Участники групп, связь между пользователями и группами';
+
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (1, 74, '1981-06-30 07:22:12');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (3, 31, '1985-01-13 16:34:40');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (3, 58, '1977-05-24 07:51:45');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (4, 20, '1970-01-02 09:26:22');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (4, 25, '1992-10-10 08:12:06');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (5, 17, '1984-05-05 23:28:54');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (5, 44, '2009-05-29 13:38:18');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (5, 97, '1980-06-24 20:48:27');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (6, 14, '2004-08-19 00:21:02');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (6, 35, '2019-01-21 11:36:58');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (6, 74, '2015-09-03 21:46:37');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (6, 83, '1986-02-20 09:00:00');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (10, 9, '1989-11-20 10:26:59');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (10, 23, '1989-01-08 16:29:27');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (11, 22, '1974-06-19 12:19:48');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (11, 91, '1981-04-30 16:44:46');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (12, 48, '1978-06-12 12:00:08');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (12, 99, '1988-02-07 06:55:11');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (14, 32, '1975-04-10 06:25:12');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (15, 6, '1988-11-11 23:44:10');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (17, 78, '1993-12-13 02:37:33');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (18, 13, '1994-08-05 00:40:54');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (18, 78, '1985-11-03 22:32:32');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (19, 60, '1996-09-13 15:37:58');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (19, 67, '1996-04-02 05:35:48');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (19, 87, '1995-10-06 01:57:12');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (21, 45, '2008-04-20 23:36:24');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (22, 1, '1974-04-12 13:28:40');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (22, 75, '1983-03-23 15:55:57');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (23, 35, '1990-05-29 11:47:49');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (25, 97, '1977-11-19 22:07:08');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (26, 17, '1976-10-07 12:13:47');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (26, 80, '1972-11-01 06:16:02');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (27, 60, '2006-10-27 16:15:08');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (29, 7, '2012-09-01 19:43:24');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (31, 43, '1992-02-16 13:54:56');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (31, 71, '2020-02-28 16:28:50');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (31, 95, '2020-08-07 13:35:49');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (32, 11, '2001-02-27 07:30:36');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (32, 28, '2019-10-05 18:01:26');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (34, 9, '2014-06-05 16:19:23');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (34, 33, '1996-11-01 00:42:41');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (34, 47, '1986-02-12 05:43:51');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (39, 2, '1970-08-27 23:22:39');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (39, 48, '2013-12-06 10:48:38');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (40, 44, '2019-07-15 10:58:50');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (40, 61, '1988-10-04 17:24:04');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (41, 29, '1975-11-11 08:11:32');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (42, 97, '1981-04-11 07:15:12');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (43, 73, '1997-11-29 06:01:29');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (43, 99, '2019-11-27 09:41:12');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (48, 92, '1982-11-21 14:56:42');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (48, 97, '1997-08-29 02:10:05');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (50, 34, '1992-11-18 16:53:01');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (53, 30, '1989-12-08 01:53:14');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (56, 10, '2001-04-13 10:34:01');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (57, 61, '1979-11-01 12:44:44');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (62, 85, '1994-01-01 22:47:17');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (63, 58, '2000-02-06 08:06:56');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (65, 59, '1986-12-31 15:44:57');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (66, 67, '1997-09-08 04:42:47');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (67, 22, '1996-05-11 22:37:10');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (69, 6, '1993-01-18 09:52:33');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (69, 56, '1980-09-19 23:45:04');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (70, 66, '1980-11-25 16:20:31');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (71, 99, '1985-02-15 15:09:52');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (72, 86, '2009-06-03 23:26:52');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (74, 21, '1981-08-22 00:16:16');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (75, 17, '2017-11-07 00:07:19');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (75, 28, '1985-06-27 04:18:47');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (75, 85, '1986-02-17 09:23:48');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (76, 58, '1993-04-24 06:49:30');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (76, 74, '1972-06-20 04:14:48');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (77, 20, '2013-01-11 22:29:59');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (77, 48, '2008-05-23 02:23:23');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (78, 55, '2011-06-18 21:13:45');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (79, 59, '1985-10-19 13:13:25');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (79, 65, '2016-08-05 03:37:46');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (79, 69, '2004-08-11 21:06:14');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (81, 10, '1989-01-09 03:33:38');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (81, 26, '2002-02-10 22:25:04');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (85, 6, '1973-04-29 18:27:41');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (85, 76, '2020-04-04 10:41:36');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (86, 16, '1994-09-30 19:50:55');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (86, 54, '1994-03-01 01:13:41');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (86, 61, '1972-07-10 10:24:54');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (87, 27, '1989-12-02 05:53:53');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (87, 80, '1995-10-16 07:46:52');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (88, 15, '1995-11-20 17:04:02');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (88, 45, '1991-02-07 03:07:30');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (88, 74, '1977-03-30 13:36:24');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (94, 21, '2004-10-01 09:00:02');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (94, 52, '2020-03-14 02:56:29');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (95, 41, '1998-10-22 22:53:56');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (95, 49, '2009-08-02 23:40:00');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (95, 71, '1988-09-22 13:20:21');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (96, 29, '1997-01-13 06:50:06');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (97, 17, '1977-12-08 23:29:43');
+INSERT INTO `communities_users` (`community_id`, `user_id`, `created_at`) VALUES (99, 6, '2010-02-26 04:21:31');
+
