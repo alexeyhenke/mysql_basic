@@ -1,0 +1,22 @@
+Last login: Thu Sep 24 00:13:01 on ttys001
+alexeyz@Alexeys-MacBook-Pro redis-6.0.8 % redis-cli
+127.0.0.1:6379> 
+127.0.0.1:6379> ping
+PONG
+127.0.0.1:6379> help @connection
+...
+...
+// В базе данных Redis подберите коллекцию для подсчета посещений с определенных IP-адресов
+
+// пробую 
+
+127.0.0.1:6379> PSUBSCRIBE mychannel 10\.10\.1[1-2][1-5]\.[1-2][0-2][0-5]
+Reading messages... (press Ctrl-C to quit)
+1) "psubscribe"
+2) "mychannel"
+3) (integer) 1
+1) "psubscribe"
+2) "10\\.10\\.1[1-2][1-5]\\.[1-2][0-2][0-5]"
+3) (integer) 2
+
+// не понимаю, что дальше ?
